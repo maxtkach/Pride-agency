@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pride Agency - Преміальне агентство нерухомості</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">Pride Agency</div>
+            <div class="nav-links">
+                <a href="#home">Головна</a>
+                <a href="#about">Про нас</a>
+                <a href="#objects">Об'єкти</a>
+                <a href="#services">Послуги</a>
+                <a href="#reviews">Відгуки</a>
+                <a href="#contacts">Контакти</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="#home">Головна</a>
+        <a href="#about">Про нас</a>
+        <a href="#objects">Об'єкти</a>
+        <a href="#services">Послуги</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="parallax-bg"></div>
+            <div class="hero-content">
+                <h1>Ваш шлях до ідеального дому</h1>
+                <p>10 років досвіду в преміальній нерухомості</p>
+                <a href="#objects" class="cta-button">Підібрати нерухомість</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Про нас</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Pride Agency - це елітне агентство нерухомості, створене в 2013 році. Ми спеціалізуємося на підборі преміальної нерухомості для наших клієнтів, використовуючи інноваційні технології та індивідуальний підхід.</p>
+                        <div class="values">
+                            <div class="value-item">
+                                <i class="fas fa-star"></i>
+                                <h3>Якість</h3>
+                                <p>Тільки найкращі об'єкти</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-handshake"></i>
+                                <h3>Надійність</h3>
+                                <p>Гарантія чесності</p>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Інновації</h3>
+                                <p>Сучасні технології</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="objects" class="objects">
+            <div class="container">
+                <h2>Об'єкти</h2>
+                <div class="filters">
+                    <select id="price-filter">
+                        <option value="">Ціна</option>
+                        <option value="0-1000000">До 1 млн ₴</option>
+                        <option value="1000000-5000000">1-5 млн ₴</option>
+                        <option value="5000000+">Від 5 млн ₴</option>
+                    </select>
+                    <select id="type-filter">
+                        <option value="">Тип житла</option>
+                        <option value="apartment">Квартира</option>
+                        <option value="house">Будинок</option>
+                        <option value="villa">Вілла</option>
+                    </select>
+                    <select id="district-filter">
+                        <option value="">Район</option>
+                        <option value="center">Центр</option>
+                        <option value="suburbs">Передмістя</option>
+                        <option value="beach">Узбережжя</option>
+                    </select>
+                </div>
+                <div class="objects-grid">
+                    <!-- Об'єкти будуть додані динамічно через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Послуги</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Підбір нерухомості</h3>
+                        <p>Індивідуальний підбір об'єктів під ваші вимоги</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Супровід угод</h3>
+                        <p>Повне юридичне супровідження</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Інвестиції</h3>
+                        <p>Консультації щодо інвестицій в нерухомість</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Років досвіду</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Успішних угод</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1000">0</div>
+                        <div class="stat-label">Задоволених клієнтів</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Партнерів</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="parallax-advantages"></div>
+            <div class="container">
+                <h2>Наші переваги</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="advantage-content">
+                            <h3>Надійність</h3>
+                            <p>Гарантуємо безпеку та прозорість угод</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="advantage-content">
+                            <h3>Швидкість</h3>
+                            <p>Оперативний підбір об'єктів</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="advantage-content">
+                            <h3>Економія</h3>
+                            <p>Оптимальні ціни та вигідні умови</p>
+                        </div>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="advantage-content">
+                            <h3>Підтримка</h3>
+                            <p>24/7 консультації та допомога</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2>Відгуки</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-content">
+                            <p>"Завдяки Pride Agency ми знайшли ідеальний будинок для нашої сім'ї. Професійний підхід та увага до деталей!"</p>
+                        </div>
+                        <div class="review-author">
+                            <img src="images/client1.jpg" alt="Анна Петрова">
+                            <div>
+                                <h4>Анна Петрова</h4>
+                                <p>Клієнт</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            <p>"Чудове агентство! Допомогли мені інвестувати в нерухомість та отримати хороший прибуток."</p>
+                        </div>
+                        <div class="review-author">
+                            <img src="images/client2.jpg" alt="Михайло Іванов">
+                            <div>
+                                <h4>Михайло Іванов</h4>
+                                <p>Інвестор</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-content">
+                            <p>"Дякую за допомогу у купівлі квартири! Весь процес був організований на найвищому рівні."</p>
+                        </div>
+                        <div class="review-author">
+                            <img src="images/client3.jpg" alt="Олена Сидорова">
+                            <div>
+                                <h4>Олена Сидорова</h4>
+                                <p>Клієнт</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2>Контакти</h2>
+                <div class="contacts-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Адреса</h3>
+                                <p>вул. Шевченка, 10<br>Київ, Україна</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Телефон</h3>
+                                <p>+380 (44) 123-45-67</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@prideagency.com</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Ваш телефон">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Ваше повідомлення" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Pride Agency</h3>
+                    <p>Ваш надійний партнер у світі нерухомості</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Головна</a>
+                    <a href="#about">Про нас</a>
+                    <a href="#objects">Об'єкти</a>
+                    <a href="#services">Послуги</a>
+                    <a href="#reviews">Відгуки</a>
+                    <a href="#contacts">Контакти</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pride Agency. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html> 
