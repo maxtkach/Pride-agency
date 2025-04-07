@@ -6,14 +6,22 @@
     <title>Pride Agency - Преміальне агентство нерухомості</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <div class="loader-text">PRIDE AGENCY</div>
+    </div>
+
     <header class="header">
         <nav class="nav-container">
             <div class="logo">Pride Agency</div>
             <div class="nav-links">
-                <a href="#home">Головна</a>
+                <a href="#home" class="active">Головна</a>
                 <a href="#about">Про нас</a>
                 <a href="#objects">Об'єкти</a>
                 <a href="#services">Послуги</a>
@@ -43,41 +51,74 @@
             <div class="hero-content">
                 <h1>Ваш шлях до ідеального дому</h1>
                 <p>10 років досвіду в преміальній нерухомості</p>
-                <a href="#objects" class="cta-button">Підібрати нерухомість</a>
+                <a href="#objects" class="cta-button">
+                    <span>Підібрати нерухомість</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <div class="hero-scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow-scroll-container">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="hero-badges">
+                <div class="badge">
+                    <i class="fas fa-award"></i>
+                    <span>Топ 10 агентств України</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% гарантія безпеки</span>
+                </div>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="container">
-                <h2>Про нас</h2>
+                <h2 class="section-title">Про нас</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <p>Pride Agency - це елітне агентство нерухомості, створене в 2013 році. Ми спеціалізуємося на підборі преміальної нерухомості для наших клієнтів, використовуючи інноваційні технології та індивідуальний підхід.</p>
-                        <div class="values">
-                            <div class="value-item">
-                                <i class="fas fa-star"></i>
-                                <h3>Якість</h3>
-                                <p>Тільки найкращі об'єкти</p>
-                            </div>
-                            <div class="value-item">
-                                <i class="fas fa-handshake"></i>
-                                <h3>Надійність</h3>
-                                <p>Гарантія чесності</p>
-                            </div>
-                            <div class="value-item">
-                                <i class="fas fa-lightbulb"></i>
-                                <h3>Інновації</h3>
-                                <p>Сучасні технології</p>
-                            </div>
+                        <p>Наша команда складається з висококваліфікованих фахівців, які мають великий досвід роботи на ринку нерухомості. Ми постійно розвиваємось та використовуємо найсучасніші технології для пошуку та презентації об'єктів.</p>
+                    </div>
+                    
+                    <div class="values">
+                        <div class="value-item">
+                            <i class="fas fa-star"></i>
+                            <h3>Якість</h3>
+                            <p>Тільки найкращі об'єкти, які пройшли ретельну перевірку та відповідають високим стандартам якості</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Надійність</h3>
+                            <p>Гарантія чесності та прозорості на всіх етапах співпраці з нашими клієнтами</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Інновації</h3>
+                            <p>Впровадження сучасних технологій для пошуку та презентації об'єктів нерухомості</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="about-shapes">
+                <div class="shape shape-1 parallax-element" data-speed="0.05"></div>
+                <div class="shape shape-2 parallax-element" data-speed="-0.1"></div>
+                <div class="shape shape-3 parallax-element" data-speed="0.15"></div>
             </div>
         </section>
 
         <section id="objects" class="objects">
             <div class="container">
-                <h2>Об'єкти</h2>
+                <h2 class="section-title">Об'єкти</h2>
                 <div class="filters">
                     <select id="price-filter">
                         <option value="">Ціна</option>
@@ -99,31 +140,44 @@
                     </select>
                 </div>
                 <div class="objects-grid">
-                    <!-- Об'єкти будуть додані динамічно через JavaScript -->
+                    <!-- Объекты будут добавлены динамически через JavaScript -->
+                </div>
+                <div class="more-objects">
+                    <a href="#" class="secondary-button">
+                        <span>Більше об'єктів</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2>Послуги</h2>
+                <h2 class="section-title">Послуги</h2>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card parallax-element" data-speed="0.1">
                         <i class="fas fa-home"></i>
                         <h3>Підбір нерухомості</h3>
                         <p>Індивідуальний підбір об'єктів під ваші вимоги</p>
+                        <a href="#" class="service-link">Детальніше <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card parallax-element" data-speed="0.15">
                         <i class="fas fa-file-contract"></i>
                         <h3>Супровід угод</h3>
                         <p>Повне юридичне супровідження</p>
+                        <a href="#" class="service-link">Детальніше <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card parallax-element" data-speed="0.2">
                         <i class="fas fa-chart-line"></i>
                         <h3>Інвестиції</h3>
                         <p>Консультації щодо інвестицій в нерухомість</p>
+                        <a href="#" class="service-link">Детальніше <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="services-shapes">
+                <div class="shape shape-4 parallax-element" data-speed="-0.1"></div>
+                <div class="shape shape-5 parallax-element" data-speed="0.15"></div>
             </div>
         </section>
 
@@ -148,12 +202,16 @@
                     </div>
                 </div>
             </div>
+            <div class="statistics-shapes">
+                <div class="shape shape-6 parallax-element" data-speed="0.05"></div>
+                <div class="shape shape-7 parallax-element" data-speed="-0.1"></div>
+            </div>
         </section>
 
         <section class="advantages">
             <div class="parallax-advantages"></div>
             <div class="container">
-                <h2>Наші переваги</h2>
+                <h2 class="section-title">Наші переваги</h2>
                 <div class="advantages-grid">
                     <div class="advantage-item">
                         <div class="advantage-icon">
@@ -193,13 +251,21 @@
                     </div>
                 </div>
             </div>
+            <div class="advantages-shapes">
+                <div class="shape shape-8 parallax-element" data-speed="-0.05"></div>
+                <div class="shape shape-9 parallax-element" data-speed="0.1"></div>
+            </div>
         </section>
 
         <section id="reviews" class="reviews">
             <div class="container">
-                <h2>Відгуки</h2>
+                <h2 class="section-title">Відгуки</h2>
+                <div class="reviews-controls">
+                    <button class="review-arrow prev-review"><i class="fas fa-chevron-left"></i></button>
+                    <button class="review-arrow next-review"><i class="fas fa-chevron-right"></i></button>
+                </div>
                 <div class="reviews-grid">
-                    <div class="review-card">
+                    <div class="review-card active">
                         <div class="review-content">
                             <p>"Завдяки Pride Agency ми знайшли ідеальний будинок для нашої сім'ї. Професійний підхід та увага до деталей!"</p>
                         </div>
@@ -209,6 +275,13 @@
                                 <h4>Анна Петрова</h4>
                                 <p>Клієнт</p>
                             </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
                     </div>
                     <div class="review-card">
@@ -222,6 +295,13 @@
                                 <p>Інвестор</p>
                             </div>
                         </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="review-card">
                         <div class="review-content">
@@ -234,14 +314,30 @@
                                 <p>Клієнт</p>
                             </div>
                         </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
                     </div>
                 </div>
+                <div class="review-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="reviews-shapes">
+                <div class="shape shape-10 parallax-element" data-speed="0.05"></div>
+                <div class="shape shape-11 parallax-element" data-speed="-0.08"></div>
             </div>
         </section>
 
         <section id="contacts" class="contacts">
             <div class="container">
-                <h2>Контакти</h2>
+                <h2 class="section-title">Контакти</h2>
                 <div class="contacts-grid">
                     <div class="contact-info">
                         <div class="contact-item">
@@ -266,24 +362,28 @@
                             </div>
                         </div>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-hover"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-hover"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-hover"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-hover"><i class="fab fa-telegram"></i></a>
                         </div>
                     </div>
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <input type="text" placeholder="Ваше ім'я" required>
+                            <span class="input-focus-effect"></span>
                         </div>
                         <div class="form-group">
                             <input type="email" placeholder="Ваш email" required>
+                            <span class="input-focus-effect"></span>
                         </div>
                         <div class="form-group">
                             <input type="tel" placeholder="Ваш телефон">
+                            <span class="input-focus-effect"></span>
                         </div>
                         <div class="form-group">
                             <textarea placeholder="Ваше повідомлення" required></textarea>
+                            <span class="input-focus-effect"></span>
                         </div>
                         <button type="submit" class="submit-button">Надіслати</button>
                     </form>
@@ -314,7 +414,155 @@
         </div>
     </footer>
 
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Модальное окно для недвижимости -->
+    <div class="modal" id="property-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Детальна інформація про об'єкт</h2>
+                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="property-details">
+                    <div class="property-image">
+                        <img src="images/property1.jpg" id="modal-property-image" alt="Фото об'єкту">
+                    </div>
+                    <div class="property-info">
+                        <h3 id="modal-property-title">Назва об'єкту</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="modal-property-location">Розташування</span>
+                        </div>
+                        <div class="property-price" id="modal-property-price">$0</div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span id="modal-property-area">0 м²</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bed"></i>
+                                <span id="modal-property-bedrooms">0 спалень</span>
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath"></i>
+                                <span id="modal-property-bathrooms">0 ванних</span>
+                            </div>
+                        </div>
+                        <div class="property-description" id="modal-property-description">
+                            Опис об'єкту нерухомості...
+                        </div>
+                        <a href="#contacts" class="modal-cta" id="modal-contact-btn">Зв'язатися з нами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна для услуг -->
+    <div class="modal" id="service-modal-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Підбір нерухомості</h2>
+                <button class="modal-close service-modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="service-modal-content">
+                    <div class="service-modal-description">
+                        <p>Наші спеціалісти допоможуть вам знайти ідеальний варіант житла, враховуючи всі ваші побажання та вимоги. Ми маємо доступ до ексклюзивної бази елітної нерухомості і завжди знаємо про найкращі пропозиції на ринку.</p>
+                        <h3>Наші переваги:</h3>
+                        <ul>
+                            <li>Індивідуальний підхід до кожного клієнта</li>
+                            <li>Великий вибір об'єктів різного класу</li>
+                            <li>Персональний менеджер протягом всього процесу</li>
+                            <li>Допомога в оформленні документів</li>
+                        </ul>
+                        <h3>Як ми працюємо:</h3>
+                        <ol>
+                            <li>Консультація і визначення ваших потреб</li>
+                            <li>Підбір варіантів згідно з вашими критеріями</li>
+                            <li>Організація перегляду об'єктів</li>
+                            <li>Допомога в укладанні угоди</li>
+                        </ol>
+                        <div class="modal-button-container">
+                            <a href="#contacts" class="modal-cta service-contact-btn">Отримати консультацію</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="service-modal-2">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Супровід угод</h2>
+                <button class="modal-close service-modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="service-modal-content">
+                    <div class="service-modal-description">
+                        <p>Повний юридичний супровід на всіх етапах угоди забезпечить вам максимальну безпеку та гарантує правову чистоту операції. Наші юристи мають великий досвід у сфері нерухомості та допоможуть уникнути будь-яких ризиків.</p>
+                        <h3>Що включає послуга:</h3>
+                        <ul>
+                            <li>Перевірка правової чистоти об'єкта</li>
+                            <li>Підготовка всіх необхідних документів</li>
+                            <li>Супровід під час підписання договору</li>
+                            <li>Представництво в державних органах</li>
+                            <li>Підтримка після завершення угоди</li>
+                        </ul>
+                        <h3>Переваги нашого супроводу:</h3>
+                        <ul>
+                            <li>Мінімізація ризиків та захист інтересів клієнта</li>
+                            <li>Економія часу на оформлення документів</li>
+                            <li>Вирішення складних юридичних питань</li>
+                            <li>Гарантія правової чистоти угоди</li>
+                        </ul>
+                        <div class="modal-button-container">
+                            <a href="#contacts" class="modal-cta service-contact-btn">Замовити супровід</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="service-modal-3">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Інвестиції в нерухомість</h2>
+                <button class="modal-close service-modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="service-modal-content">
+                    <div class="service-modal-description">
+                        <p>Наші експерти допоможуть вам розробити оптимальну інвестиційну стратегію та підібрати об'єкти з найкращим потенціалом зростання вартості. Інвестиції в нерухомість – це надійний спосіб зберегти та примножити ваш капітал.</p>
+                        <h3>Інвестиційні можливості:</h3>
+                        <ul>
+                            <li>Житлова нерухомість для здачі в оренду</li>
+                            <li>Комерційна нерухомість з високою доходністю</li>
+                            <li>Об'єкти на стадії будівництва</li>
+                            <li>Елітна нерухомість в престижних районах</li>
+                        </ul>
+                        <h3>Наша підтримка включає:</h3>
+                        <ul>
+                            <li>Аналіз ринку та тенденцій</li>
+                            <li>Розрахунок потенційної прибутковості</li>
+                            <li>Підбір об'єктів згідно з вашим бюджетом</li>
+                            <li>Юридичний супровід інвестицій</li>
+                            <li>Управління нерухомістю після придбання</li>
+                        </ul>
+                        <div class="modal-button-container">
+                            <a href="#contacts" class="modal-cta service-contact-btn">Отримати консультацію</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html> 
